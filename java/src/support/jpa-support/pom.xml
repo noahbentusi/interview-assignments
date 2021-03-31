@@ -20,12 +20,25 @@
         <artifactId>spring-data-jpa</artifactId>
         <version>2.1.8.RELEASE</version>
     </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate5</artifactId>
+        <version>2.9.9</version>
+    </dependency>
   	<dependency>
 	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-core</artifactId>
+	  <!-- 
 	  <artifactId>hibernate-agroal</artifactId>
-	  <version>5.4.3.Final</version>
 	  <type>pom</type>
+	  -->
+	  <version>5.4.3.Final</version>
 	</dependency>
+	<dependency>
+  		<groupId>com.sequoiacap</groupId>
+  		<artifactId>utils</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>
 

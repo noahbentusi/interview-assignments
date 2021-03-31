@@ -48,7 +48,7 @@
     <import resource="application-config.xml"/>
     <import resource="/*/spring-config.xml" />
     
-    <aop:aspectj-autoproxy/>
+    <aop:aspectj-autoproxy expose-proxy="true"/>
 <!-- 
     <bean id="passwordEncoder"
         class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>

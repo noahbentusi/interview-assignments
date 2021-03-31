@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import net.jhorstmann.i18n.LocaleProvider;
 import net.jhorstmann.i18n.LocaleProviderFactory;
+
 public class ThreadAwareLocaleProviderFactory
 	extends LocaleProviderFactory
 {
@@ -79,6 +80,11 @@ public class ThreadAwareLocaleProviderFactory
     			{
     				langTag =(String) session.getAttribute(LANGTAG);
     			}
+    		}
+    		
+    		if (StringUtils.isBlank(langTag))
+    		{
+    			langTag = request.getHeader("language");
     		}
     		
     		if (StringUtils.isBlank(langTag))

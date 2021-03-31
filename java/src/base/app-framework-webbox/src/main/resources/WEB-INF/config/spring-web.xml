@@ -44,15 +44,15 @@
                 <bean class="org.springframework.http.converter.ResourceHttpMessageConverter" />
                 <bean class="org.springframework.http.converter.StringHttpMessageConverter" />
                 <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-                    <constructor-arg>
+                    <!-- <constructor-arg>
                         <bean class="com.sequoiacap.json.JsonObjectMapper"/>
-                    </constructor-arg>
+                    </constructor-arg>  -->
                 </bean>
             </list>
         </property>
     </bean>
 
-    <aop:aspectj-autoproxy/>
+    <aop:aspectj-autoproxy expose-proxy="true"/>
 
     <import resource="/*/web-config.xml" />
 </beans>

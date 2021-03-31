@@ -16,7 +16,7 @@
 
 	<packaging>pom</packaging>
 
-    <name>self-execute</name>
+    <name>self-execute-starter</name>
 	<description>self execute for Spring Boot</description>
 
     <properties>
@@ -24,6 +24,11 @@
 	</properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.sequoiacap.web</groupId>
+            <artifactId>self-execute-webbox</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -47,6 +52,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                    <groupId>net.jhorstmann</groupId>
+                    <artifactId>i18n-maven-plugin</artifactId>
+                    <version>0.2</version>
+            </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-dependency-plugin</artifactId>

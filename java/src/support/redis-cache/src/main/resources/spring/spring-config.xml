@@ -74,7 +74,9 @@
     
     <bean class="com.sequoiacap.session.TokenHttpSessionIdResolver"/>
     
+    <!-- 
     <bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"/>
+	 -->
 
     <bean id="jedisUtil" class="com.sequoiacap.cache.utils.JedisUtil"/>
 </beans>

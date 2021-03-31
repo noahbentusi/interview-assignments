@@ -73,11 +73,11 @@
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
             </props>
         </property>
-
+<!-- 
         <property name="loadTimeWeaver">
             <bean class="org.springframework.instrument.classloading.ReflectiveLoadTimeWeaver"/>
         </property>
-
+ -->
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">            
                 <property name="generateDdl" value="${jdbc-ddl}"/>

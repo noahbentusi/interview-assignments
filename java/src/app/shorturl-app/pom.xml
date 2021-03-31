@@ -18,15 +18,38 @@
   		<artifactId>utils</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>com.sequoiacap</groupId>
+  		<artifactId>redis-cache</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sequoiacap</groupId>
+  		<artifactId>jpa-support</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
     <dependency>
         <groupId>com.sequoiacap.web</groupId>
         <artifactId>app-framework-webbox</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </dependency>
+    
+    
     <dependency>
-    	<groupId>com.sequoiacap.web</groupId>
-		<artifactId>self-execute-webbox</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+        <groupId>com.sequoiacap</groupId>
+        <artifactId>shorturl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>    
+    <dependency>
+        <groupId>com.sequoiacap.web</groupId>
+        <artifactId>shorturl-webbox</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+	
+	<dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.23</version>
     </dependency>
   </dependencies>
   

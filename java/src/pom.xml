@@ -17,10 +17,15 @@
 
       <module>support/redis-cache</module>
       <module>support/dubbo-support</module>
+      <module>support/jpa-support</module>
       <module>support/lang-pack</module>
 
       <module>support/self-execute</module>
       <module>support/self-execute-starter</module>
+
+      <module>modules/shorturl/shorturl-api</module>
+      <module>modules/shorturl/shorturl</module>
+      <module>modules/shorturl/shorturl-webbox</module>
 
       <module>app/shorturl-app</module>
   </modules>

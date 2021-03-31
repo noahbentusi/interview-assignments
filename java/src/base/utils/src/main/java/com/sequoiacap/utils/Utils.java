@@ -156,6 +156,26 @@ public class Utils
         return sb.toString();
     }
     
+    static char[] strbase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+    
+    public static String getRandomStringByLength(int length, Random random, char[] sb)
+    {
+        if (random == null)
+        	random = new Random();
+        
+        if (sb == null)
+        	sb = new char[length];
+        
+        for(int i = 0; i < length; i++)
+        {
+        	int number = random.nextInt(strbase.length);
+        	
+        	sb[i] = strbase[number];
+        }
+
+        return new String(sb);
+    }
+
     public static Double keepScale(Double value, int scale)
     {
         BigDecimal big = new BigDecimal(value); 

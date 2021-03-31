@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
-/*import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;*/
+import org.springframework.data.domain.Sort;
 
 public class Pager<T>
 	implements Serializable
@@ -167,7 +167,7 @@ public class Pager<T>
 		this.sort = sort;
 	}
 
-	/*public static <T> Pager<T> valueOf(Pageable page)
+	public static <T> Pager<T> valueOf(Pageable page)
 	{
 		Pager<T> pager = new Pager<T>();
 
@@ -235,7 +235,7 @@ public class Pager<T>
 		}
 
 		return PageRequest.of(this.page - 1, this.size, sort);
-	}*/
+	}
 	
 	/**
 	 * 增加默认排序的Pageable转换
@@ -245,7 +245,7 @@ public class Pager<T>
 	 * 
 	 * @return Pageable请求
 	 */
-	/*public Pageable toPageable(Sort.Direction direction, String name)
+	public Pageable toPageable(Sort.Direction direction, String name)
 	{
 		if (this.sort != null)
 		{
@@ -254,7 +254,7 @@ public class Pager<T>
 		}
 
 		return PageRequest.of(this.page - 1, this.size, direction, name);
-	}*/
+	}
 
 	public String getMessage() {
 		return message;
@@ -346,42 +346,42 @@ public class Pager<T>
 
 		return page;
 	}
-    /*public String toSql()
+	public String toSql()
     {
-     return toSql(toPageable());
+		return toSql(toPageable());
     }
 
     public static String toSql(Pageable page)
     {
-     StringBuilder sql = new StringBuilder();
+    	StringBuilder sql = new StringBuilder();
 
-     Sort sort = page.getSort();
+    	Sort sort = page.getSort();
 
-     if (sort.isSorted())
-     {
-      sql.append("ORDER BY ");
+     	if (sort.isSorted())
+     	{
+     		sql.append("ORDER BY ");
 
-      Iterator<Sort.Order> it = sort.iterator();
+     		Iterator<Sort.Order> it = sort.iterator();
       
-      while(it.hasNext())
-      {
-       Sort.Order order = it.next();
+		    while(it.hasNext())
+		    {
+		       Sort.Order order = it.next();
+		
+		       sql.append(order.getProperty());
+		       
+		       if (order.getDirection() != null)
+		       {
+		        sql.append(" ").append(order.getDirection());
+		       }
+		       
+		       if (it.hasNext())
+		        sql.append(", ");
+		   }
+     	}
 
-       sql.append(order.getProperty());
-       
-       if (order.getDirection() != null)
-       {
-        sql.append(" ").append(order.getDirection());
-       }
-       
-       if (it.hasNext())
-        sql.append(", ");
-      }
-     }
-
-     sql.append(" LIMIT ").append(page.getPageSize())
-      .append(" OFFSET ").append(page.getOffset());
+     	sql.append(" LIMIT ").append(page.getPageSize())
+     		.append(" OFFSET ").append(page.getOffset());
 
      return sql.toString();
-    }*/
+    }
 }

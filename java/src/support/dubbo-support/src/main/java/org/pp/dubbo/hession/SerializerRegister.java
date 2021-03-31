@@ -10,11 +10,12 @@ import java.util.Set;
 
 import org.apache.dubbo.common.serialize.hessian2.Hessian2SerializerFactory;
 import org.apache.log4j.Logger;
+import org.hibernate.collection.internal.AbstractPersistentCollection;
 //import org.hibernate.collection.internal.AbstractPersistentCollection;
 import org.pp.dubbo.serializer.GsonDeserializer;
 import org.pp.dubbo.serializer.GsonSerializer;
-//import org.pp.dubbo.serializer.PageDeserializer;
-//import org.pp.dubbo.serializer.PageSerializer;
+import org.pp.dubbo.serializer.PageDeserializer;
+import org.pp.dubbo.serializer.PageSerializer;
 import com.sequoiacap.utils.AnnotationHelper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -29,6 +30,7 @@ import com.alibaba.com.caucho.hessian.io.HessianProtocolException;
 import com.alibaba.com.caucho.hessian.io.Serializer;
 import com.alibaba.com.caucho.hessian.io.SerializerFactory;
 
+
 public class SerializerRegister
 {
 	private static final Logger log = Logger.getLogger(SerializerRegister.class);
@@ -39,8 +41,8 @@ public class SerializerRegister
 		register(PageRequest.class);
 		register(Pageable.class, PageRequest.class);
 
-		//register(Page.class, new PageSerializer(), new PageDeserializer());
-		//register(PageImpl.class, new PageSerializer(), new PageDeserializer());
+		register(Page.class, new PageSerializer(), new PageDeserializer());
+		register(PageImpl.class, new PageSerializer(), new PageDeserializer());
 
 		registerPersistCollection();
 	}
@@ -52,7 +54,7 @@ public class SerializerRegister
 			public Serializer getSerializer(Class cl)
 				throws HessianProtocolException
 			{
-				/*if (AbstractPersistentCollection.class.isAssignableFrom(cl))
+				if (AbstractPersistentCollection.class.isAssignableFrom(cl))
 				{
 					return new Serializer() {
 						@Override
@@ -94,7 +96,7 @@ public class SerializerRegister
 							}
 						}
 					};
-				}*/
+				}
 
 				return null;
 			}
