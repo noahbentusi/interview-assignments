@@ -25,6 +25,7 @@
 
       <module>modules/shorturl/shorturl-api</module>
       <module>modules/shorturl/shorturl</module>
+      <module>modules/shorturl/shorturl-task</module>
       <module>modules/shorturl/shorturl-webbox</module>
 
       <module>modules/shorturl/shorturl-export</module>

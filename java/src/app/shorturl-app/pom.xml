@@ -39,6 +39,11 @@
         <groupId>com.sequoiacap</groupId>
         <artifactId>shorturl</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>com.sequoiacap</groupId>
+        <artifactId>shorturl-task</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </dependency>    
     <dependency>
         <groupId>com.sequoiacap.web</groupId>

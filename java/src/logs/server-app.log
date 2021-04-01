@@ -20,3 +20,12 @@
 2021-04-01 14:01:04,028 [INFO ](206) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie apbmVjgY to com.sequoiacap.shorturl.model.SUrl@6979efad  
 2021-04-01 14:01:04,044 [INFO ](222) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie pIPnGvC7 to com.sequoiacap.shorturl.model.SUrl@5bb3d42d  
 2021-04-01 14:01:04,054 [INFO ](232) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie N03DPtBI to com.sequoiacap.shorturl.model.SUrl@15051a0  
+2021-04-01 14:25:42,784 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:143) start test  
+2021-04-01 14:25:42,982 [INFO ](198) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie Z6JvPVXB to com.sequoiacap.shorturl.model.SUrl@6979efad  
+2021-04-01 14:25:43,009 [INFO ](225) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie u52QZZit to com.sequoiacap.shorturl.model.SUrl@5bb3d42d  
+2021-04-01 14:25:43,018 [INFO ](234) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie M8BBuYdZ to com.sequoiacap.shorturl.model.SUrl@15051a0  
+2021-04-01 14:31:21,422 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:149) start test  
+2021-04-01 14:31:21,610 [INFO ](188) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie 1GH0SgCC to com.sequoiacap.shorturl.model.SUrl@54f5f647  
+2021-04-01 14:31:21,628 [INFO ](206) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie n48obCcU to com.sequoiacap.shorturl.model.SUrl@30272916  
+2021-04-01 14:31:21,637 [INFO ](215) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie wIoKoiEZ to com.sequoiacap.shorturl.model.SUrl@51671b08  
+2021-04-01 14:31:21,788 [INFO ](366) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:154) finish test  

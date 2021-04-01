@@ -1,6 +1,8 @@
 package com.sequoiacap.shorturl.service.impl;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -57,6 +59,9 @@ public class SUrlManagerImpl
     
     @Value("${surl.tries:7}")
     protected Integer maxTires;
+    
+    @Value("${surl.expire:3}")
+    protected Integer expire;
     
     public void afterPropertiesSet() throws Exception {
         setRepository(sUrlRepository);
@@ -197,6 +202,21 @@ public class SUrlManagerImpl
 		log.info(String.format("generatie %s to %s", shortUrl, surl));
 
 		return surl;
+	}
+
+	@Override
+	@Transactional
+	public int refreshStatus()
+	{
+		Timestamp now = Utils.now();
+		
+		Timestamp thatDay =
+			Utils.offsetTimestamp(
+				now, -expire.intValue(), Calendar.DATE); 
+
+		return sUrlRepository.refreshStatus(
+			SUrl.Type.short_period, SUrl.Status.normal,
+			thatDay, SUrl.Status.invalid);
 	}
 }
 

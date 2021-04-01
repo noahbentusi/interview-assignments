@@ -1,8 +1,12 @@
 package com.sequoiacap.test;
 
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.sequoiacap.cache.utils.JedisUtil;
@@ -20,7 +24,7 @@ import org.junit.Test;
 
 @Component
 public class ShortUrlTests
-	implements InitializingBean
+	implements InitializingBean, ApplicationContextAware
 {
 	private static final Logger log = Logger.getLogger(ShortUrlTests.class);
 
@@ -33,6 +37,8 @@ public class ShortUrlTests
 	@Autowired
 	private SUrlManager sUrlManager;
 
+	private ApplicationContext appCtxt;
+	
 	static final String testUrl = "https://test.baidu.com?code=";
 
 	private String url1, url2, url3;
@@ -143,5 +149,17 @@ public class ShortUrlTests
 		log.info("start test");
 
 		testSet();
+		testGet();
+
+		log.info("finish test");
+
+		((ConfigurableApplicationContext) appCtxt).close();
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext)
+		throws BeansException
+	{
+		appCtxt = applicationContext;
 	}
 }

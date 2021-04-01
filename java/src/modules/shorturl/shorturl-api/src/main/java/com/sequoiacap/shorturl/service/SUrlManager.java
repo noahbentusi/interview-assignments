@@ -13,4 +13,6 @@ public interface SUrlManager
 		throws BusinessException;
 	
 	public SUrl get(String shortUrl);
+	
+	public int refreshStatus();
 }
