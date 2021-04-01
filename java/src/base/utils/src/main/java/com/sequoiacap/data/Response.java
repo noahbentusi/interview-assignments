@@ -13,23 +13,16 @@ public class Response<T>
 	 * 状态值
 	 */
 	private Integer status = 200;
-	
+
 	/**
 	 * 错误信息
 	 */
 	private String message;
-	
-	/**
-	 * 验证码
-	 */
-	private String nbCode;
-	
+
 	/**
 	 * 数据
 	 */
 	private T result;
-	
-	private HashMap<String, Object> attach = new HashMap<String, Object>();
 
 	public T getResult()
 	{
@@ -39,14 +32,6 @@ public class Response<T>
 	public void setResult(T result)
 	{
 		this.result = result;
-	}
-
-	public String getNbCode() {
-		return nbCode;
-	}
-
-	public void setNbCode(String nbCode) {
-		this.nbCode = nbCode;
 	}
 
 	public Integer getStatus() {
@@ -63,13 +48,5 @@ public class Response<T>
 
 	public void setMessage(String message) {
 		this.message = message;
-	}
-
-	public HashMap<String, Object> getAttach() {
-		return attach;
-	}
-
-	public void setAttach(HashMap<String, Object> attach) {
-		this.attach = attach;
 	}
 }

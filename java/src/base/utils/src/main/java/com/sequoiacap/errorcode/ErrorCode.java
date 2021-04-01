@@ -12,5 +12,7 @@ public class ErrorCode
 	
 	public static final int NOT_FOUND = 404;
 	
+	public static final int INVALID_URL = 405;
+	
 	public static final int FAILED_SURL = 500;
 }

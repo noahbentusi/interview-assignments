@@ -16,6 +16,11 @@
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   	<dependency>
+  		<groupId>com.sequoiacap.web</groupId>
+  		<artifactId>utils-webbox</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
   		<groupId>com.sequoiacap</groupId>
   		<artifactId>shorturl-api</artifactId>
   		<version>0.0.1-SNAPSHOT</version>

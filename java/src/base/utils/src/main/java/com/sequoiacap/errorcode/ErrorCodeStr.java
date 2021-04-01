@@ -14,4 +14,6 @@ public class ErrorCodeStr
 	public static final String STR_NOT_FOUND = "Unknown short url";
 	
 	public static final String STR_FAILED_SURL = "Failed to generatie short url";
+	
+	public static final String STR_INVALID_URL = "Invalid url";
 }

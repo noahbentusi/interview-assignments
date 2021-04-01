@@ -27,6 +27,9 @@
       <module>modules/shorturl/shorturl</module>
       <module>modules/shorturl/shorturl-webbox</module>
 
+      <module>modules/shorturl/shorturl-export</module>
+      <module>modules/shorturl/shorturl-import</module>
+
       <module>app/shorturl-app</module>
   </modules>
 </project>

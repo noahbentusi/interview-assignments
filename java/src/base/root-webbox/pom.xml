@@ -20,6 +20,7 @@
       <artifactId>i18n-jsp</artifactId>
       <version>0.2</version>
     </dependency>
+    
   </dependencies>
   
   <build>

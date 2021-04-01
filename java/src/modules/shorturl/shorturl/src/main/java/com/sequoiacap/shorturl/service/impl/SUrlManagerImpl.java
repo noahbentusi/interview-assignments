@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,6 +66,20 @@ public class SUrlManagerImpl
 	public SUrl set(String url, Type type, String ip)
 		throws BusinessException
 	{
+		if (StringUtils.isBlank(url))
+		{
+			throw new BusinessException(
+				ErrorCode.INVALID_URL,
+				I18N.tr(ErrorCodeStr.STR_INVALID_URL));
+		}
+		
+		if (type == null)
+		{
+			throw new BusinessException(
+				ErrorCode.INVALID_TYPE,
+				I18N.tr(ErrorCodeStr.STR_INVALID_TYPE));
+		}
+
 		if (url.length() >= maxLength.intValue())
 		{
 			throw new BusinessException(
@@ -88,7 +103,23 @@ public class SUrlManagerImpl
 
 			/** 如果状态已入库，则直接返回 */
 			if (surl != null && surl.getStatus() != null)
+			{
+				/** 如果新类型升级了，则修改记录 */
+				if (surl.getType().ordinal() < type.ordinal())
+				{
+					SUrlManager pthis =(SUrlManager) AopContext.currentProxy();
+
+					surl.setType(type);
+					surl.setStatus(SUrl.Status.normal);
+
+					pthis.save(surl);
+
+					urlVals.set(md5, surl, cacheTime.intValue(), TimeUnit.SECONDS);
+					urlVals.set("surl:" + surl.getShortUrl(), surl, cacheTime.intValue(), TimeUnit.SECONDS);
+				}
+
 				return surl;
+			}
 
 			throw new BusinessException(
 				ErrorCode.MANY_REQUEST_SAME_URL,
@@ -140,7 +171,7 @@ public class SUrlManagerImpl
 		List<SUrl> rows =
 			sUrlRepository.findShorturl(
 				shortUrl, SUrl.Status.normal,
-				PageRequest.of(0, 1, new Sort(Sort.Direction.ASC, "id")));
+				PageRequest.of(0, 1, Sort.by(Sort.Direction.ASC, "id")));
 		if (CollectionUtils.isEmpty(rows))
 			return null;
 

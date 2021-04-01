@@ -1,0 +1,22 @@
+2021-04-01 10:13:22,471 [INFO ](0) http-nio-8080-exec-2 com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:166) generatie tN3TtZfH to com.sequoiacap.shorturl.model.SUrl@2976b913  
+2021-04-01 13:11:01,594 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:32) start test  
+2021-04-01 13:27:26,036 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:96) start test  
+2021-04-01 13:27:26,221 [INFO ](185) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:182) generatie kCoyhiD3 to com.sequoiacap.shorturl.model.SUrl@438bad7c  
+2021-04-01 13:27:26,247 [INFO ](211) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:182) generatie C2Vbn8zU to com.sequoiacap.shorturl.model.SUrl@199e4c2b  
+2021-04-01 13:27:26,256 [INFO ](220) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:182) generatie NpIASU7m to com.sequoiacap.shorturl.model.SUrl@251ebf23  
+2021-04-01 13:31:02,223 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:96) start test  
+2021-04-01 13:31:02,425 [INFO ](202) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:190) generatie m7sWYwzv to com.sequoiacap.shorturl.model.SUrl@4fdf8f12  
+2021-04-01 13:31:02,445 [INFO ](222) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:190) generatie nfAJ3j2X to com.sequoiacap.shorturl.model.SUrl@6e0d4a8  
+2021-04-01 13:31:02,453 [INFO ](230) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:190) generatie 0Jg4lX5V to com.sequoiacap.shorturl.model.SUrl@29b732a2  
+2021-04-01 13:34:46,743 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:96) start test  
+2021-04-01 13:34:46,967 [INFO ](224) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie LRCnMu61 to com.sequoiacap.shorturl.model.SUrl@25230246  
+2021-04-01 13:34:46,984 [INFO ](241) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie 9MlHIBqQ to com.sequoiacap.shorturl.model.SUrl@199e4c2b  
+2021-04-01 13:34:46,993 [INFO ](250) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie THIQ8iKR to com.sequoiacap.shorturl.model.SUrl@251ebf23  
+2021-04-01 13:58:14,762 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:141) start test  
+2021-04-01 13:58:14,962 [INFO ](200) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie QmP02MnH to com.sequoiacap.shorturl.model.SUrl@6979efad  
+2021-04-01 13:58:14,978 [INFO ](216) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie kdcuy9g2 to com.sequoiacap.shorturl.model.SUrl@5bb3d42d  
+2021-04-01 13:58:14,988 [INFO ](226) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie CJLMfuJx to com.sequoiacap.shorturl.model.SUrl@15051a0  
+2021-04-01 14:01:03,822 [INFO ](0) main com.sequoiacap.test.ShortUrlTests.afterPropertiesSet(ShortUrlTests.java:143) start test  
+2021-04-01 14:01:04,028 [INFO ](206) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie apbmVjgY to com.sequoiacap.shorturl.model.SUrl@6979efad  
+2021-04-01 14:01:04,044 [INFO ](222) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie pIPnGvC7 to com.sequoiacap.shorturl.model.SUrl@5bb3d42d  
+2021-04-01 14:01:04,054 [INFO ](232) main com.sequoiacap.shorturl.service.impl.SUrlManagerImpl.keepit(SUrlManagerImpl.java:197) generatie N03DPtBI to com.sequoiacap.shorturl.model.SUrl@15051a0  
